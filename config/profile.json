@@ -1,0 +1,17 @@
+{
+  "username": "NhatNguyen2407",
+  "stats_days": 30,
+  "code_repositories": [
+    {"name": "Project", "path": "Working_Projects/Dioxyzine_Frog/"},
+    {"name": "frog-management", "path": ""},
+    {"name": "retail-customer-insights", "path": ""},
+    {"name": "football-analytics", "path": ""}
+  ],
+  "language_repositories": ["Portfolio", "frog-management", "retail-customer-insights", "football-analytics"],
+  "excluded_paths": [
+    "node_modules/*", "*/node_modules/*", "vendor/*", "*/vendor/*", "dist/*", "*/dist/*",
+    "build/*", "*/build/*", ".next/*", "*/.next/*", "coverage/*", "*/coverage/*",
+    "package-lock.json", "*/package-lock.json", "pnpm-lock.yaml", "*/pnpm-lock.yaml",
+    "yarn.lock", "*/yarn.lock", "*.min.js", "*.min.css", "*.map"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "fingerprint": "0908497fa491036472ea6f25e600a018eb43e22eb6feacde46f1ba0ada7f6344",
+  "commits": {
+    "NhatNguyen2407/Project:8c72e0f9ed6973d7a91500246f3d8fbf8b58246e": {
+      "added": 87,
+      "deleted": 6
+    },
+    "NhatNguyen2407/Project:ba4331d9f60251034ec49475e93d4e8e08cf39ba": {
+      "added": 35,
+      "deleted": 35
+    },
+    "NhatNguyen2407/Project:8b80d8af3d4190ea6b070cf062a9bb0efca2f080": {
+      "added": 338,
+      "deleted": 0
+    },
+    "NhatNguyen2407/Project:c861492b29cd6b71df351005951dd6fb273c7058": {
+      "added": 10,
+      "deleted": 2
+    },
+    "NhatNguyen2407/Project:cddbaaa97b27fe0eb4f6b3ede5d9e69754cee053": {
+      "added": 119,
+      "deleted": 20
+    },
+    "NhatNguyen2407/Project:516eee2f33f0c6f2ba19b1b323c2577093e69d06": {
+      "added": 1001,
+      "deleted": 0
+    },
+    "NhatNguyen2407/Project:f200bed63cd41dd52c3be5aa21dc6412dfda6905": {
+      "added": 35,
+      "deleted": 10
+    },
+    "NhatNguyen2407/Project:a54cb8538d6e9fbb0bc0a1827e033edb6d3cc6f2": {
+      "added": 157,
+      "deleted": 2
+    },
+    "NhatNguyen2407/Project:404f584c3cd2897c2a9e7768773afaa34e116ac6": {
+      "added": 106,
+      "deleted": 7
+    },
+    "NhatNguyen2407/Project:8edfea7586c1dd8898cef96f3e9f436c3ccca880": {
+      "added": 30,
+      "deleted": 0
+    },
+    "NhatNguyen2407/Project:a4490cc7538463db4f61a0b434236eed2a01ffd0": {
+      "added": 37,
+      "deleted": 37
+    },
+    "NhatNguyen2407/Project:4cdcb33b7685e186d279ac425aeb5f4183406688": {
+      "added": 214,
+      "deleted": 0
+    },
+    "NhatNguyen2407/Project:33c8524b75d00e6a512c275968e5df219df6980a": {
+      "added": 68,
+      "deleted": 29
+    },
+    "NhatNguyen2407/Project:b5f22b60841e3f631e28fb7ba153cf7821781b38": {
+      "added": 1,
+      "deleted": 1
+    },
+    "NhatNguyen2407/Project:339b35f752fd6f25197ffc42849b803057a43200": {
+      "added": 7,
+      "deleted": 13
+    },
+    "NhatNguyen2407/Project:3d153a7b3852c29c953466b8da020b64e1e626df": {
+      "added": 18,
+      "deleted": 0
+    },
+    "NhatNguyen2407/frog-management:e39b76e047a62ae1c412faf86e4b1c28c0cc7a47": {
+      "added": 305,
+      "deleted": 16
+    },
+    "NhatNguyen2407/frog-management:ffed29cbbc8fb32ec738c54bcf558d1fbcb05969": {
+      "added": 347,
+      "deleted": 47
+    },
+    "NhatNguyen2407/frog-management:fb1862e62c5c026c838bdc6362fba7839e2df4c6": {
+      "added": 7908,
+      "deleted": 2225
+    },
+    "NhatNguyen2407/frog-management:5dadc35246db96c26b8bd808d40201d293f71f0e": {
+      "added": 25,
+      "deleted": 0
+    },
+    "NhatNguyen2407/frog-management:f09dbed1abac8740af9555d69111fd178eb4ecda": {
+      "added": 284,
+      "deleted": 8
+    },
+    "NhatNguyen2407/frog-management:809161e5013323564978d272dfc36dbbdcfaa2a1": {
+      "added": 151,
+      "deleted": 8
+    },
+    "NhatNguyen2407/frog-management:c5b0db5fc2dab1dc1072850596e0783ff27747a2": {
+      "added": 1742,
+      "deleted": 72
+    },
+    "NhatNguyen2407/frog-management:07fa9775f259d00ae0ea61af1b22946988ca7bb2": {
+      "added": 2,
+      "deleted": 1
+    },
+    "NhatNguyen2407/frog-management:443455f755ce239f53cf0476f42d409c75eea338": {
+      "added": 219,
+      "deleted": 9
+    },
+    "NhatNguyen2407/frog-management:877f25b0f28f9fc59c5420ed05507dfc0c9f4682": {
+      "added": 2,
+      "deleted": 1
+    },
+    "NhatNguyen2407/frog-management:298de88b7db115e702715a0321ce8bb9aebc3eb6": {
+      "added": 116,
+      "deleted": 34
+    },
+    "NhatNguyen2407/frog-management:6b5a4f6ab59c0670804d26b75adbbb3bad2a04e2": {
+      "added": 208,
+      "deleted": 17
+    },
+    "NhatNguyen2407/frog-management:1bb3ee90016e89aa7011575b2444ac228b5f0a51": {
+      "added": 50,
+      "deleted": 4
+    },
+    "NhatNguyen2407/frog-management:d4f76da7e45a56dc07e7f51c7656ecd70d9493ec": {
+      "added": 3,
+      "deleted": 5
+    },
+    "NhatNguyen2407/frog-management:c68fdf97a3bca233c215cb0c669624a02b140e02": {
+      "added": 213,
+      "deleted": 0
+    },
+    "NhatNguyen2407/frog-management:d014d3c6e4b71ced3386acc2086026f1f1db40ba": {
+      "added": 0,
+      "deleted": 42
+    },
+    "NhatNguyen2407/frog-management:f6e8b0e1cce29bb23d602ad7b7edcb69097de31e": {
+      "added": 146,
+      "deleted": 120
+    },
+    "NhatNguyen2407/frog-management:36b7af911e38ec6a9972f786d9b750756e4b546c": {
+      "added": 4052,
+      "deleted": 217
+    },
+    "NhatNguyen2407/frog-management:0651dcbf6584cbb666d227568e471d99c2a1009d": {
+      "added": 278,
+      "deleted": 0
+    },
+    "NhatNguyen2407/retail-customer-insights:3ff09a27683c84e7c47a8a14be3be28766a31537": {
+      "added": 1,
+      "deleted": 1
+    },
+    "NhatNguyen2407/retail-customer-insights:6c4704032ca457e5718618254ce32889b355ac40": {
+      "added": 33,
+      "deleted": 0
+    },
+    "NhatNguyen2407/retail-customer-insights:de09aa12fb770ac4faac7b5581f2451b2da2fd98": {
+      "added": 5,
+      "deleted": 1
+    },
+    "NhatNguyen2407/retail-customer-insights:0b6f6c0e6c489c45a1726cc191b469a4d3decd1b": {
+      "added": 552,
+      "deleted": 1
+    },
+    "NhatNguyen2407/retail-customer-insights:b6e508fafbf5e7fcfe200adb690685fa7d43f3bd": {
+      "added": 1,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:73ed9f35e55b15f7c122e8677ae9cae44967135b": {
+      "added": 85,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:ce05e1e4b767f081d7a3ffdb091afa5f9fa5b75e": {
+      "added": 102,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:cfd70f1d4d62ee1ea86073a1b277acafc1c34f49": {
+      "added": 72,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:5432e077b88ad2f5352398100e7e63815f9271e5": {
+      "added": 3,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:763a28127fa3591f85276da62e2785911c8f3864": {
+      "added": 5,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:1a35e17658a9c45a756b64f9049ba7bb8bccc6a1": {
+      "added": 4,
+      "deleted": 0
+    },
+    "NhatNguyen2407/football-analytics:bdf6290c7e3e4270f0388987db4f83f2febdcdc6": {
+      "added": 75,
+      "deleted": 0
+    }
+  }
+}

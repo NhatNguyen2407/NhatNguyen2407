@@ -1,0 +1,63 @@
+{
+  "updated_at": "2026-10-30T15:39:47Z",
+  "since": "2026-09-30T15:39:47Z",
+  "days": 30,
+  "stats": {
+    "stars": 2,
+    "commits": 47,
+    "pull_requests": 23,
+    "issues": 5,
+    "added": 19252,
+    "deleted": 2991
+  },
+  "languages": {
+    "TypeScript": 181782,
+    "HTML": 91054,
+    "PLpgSQL": 73299,
+    "CSS": 46888,
+    "Python": 27570,
+    "JavaScript": 21573
+  },
+  "events": [
+    {
+      "date": "2026-10-29",
+      "title": "Pushed changes to NhatNguyen2407/frog-management",
+      "url": "https://github.com/NhatNguyen2407/frog-management"
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Pushed changes to NhatNguyen2407/frog-management",
+      "url": "https://github.com/NhatNguyen2407/frog-management"
+    },
+    {
+      "date": "2026-10-27",
+      "title": "Pushed changes to NhatNguyen2407/frog-management",
+      "url": "https://github.com/NhatNguyen2407/frog-management"
+    }
+  ],
+  "code_scope": [
+    {
+      "name": "Project",
+      "path": "Working_Projects/Dioxyzine_Frog/"
+    },
+    {
+      "name": "frog-management",
+      "path": ""
+    },
+    {
+      "name": "retail-customer-insights",
+      "path": ""
+    },
+    {
+      "name": "football-analytics",
+      "path": ""
+    }
+  ],
+  "language_scope": [
+    "Portfolio",
+    "frog-management",
+    "retail-customer-insights",
+    "football-analytics"
+  ],
+  "pending_lines": 0
+}

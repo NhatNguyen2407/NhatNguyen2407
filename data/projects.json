@@ -1,0 +1,157 @@
+[
+  {
+    "id": "dio",
+    "number": "01",
+    "title": "Dioxyzine Frog",
+    "category": "WEB APPLICATION",
+    "summary": "A storefront for custom plushies, dolls and accessories.",
+    "role": "Frontend development and service integration, including backend parts of checkout and order management.",
+    "introduction": "I’m building an e-commerce website for custom plushies, dolls and accessories. The project connects a customer-facing storefront with accounts, order tracking and administration workflows.",
+    "problem": "Keep product discovery, checkout and order follow-up connected in one website, while making the administration tools usable for the shop.",
+    "features": [
+      "Product listings, product details and a shopping cart",
+      "Account registration, sign-in, password reset and profile pages",
+      "Checkout with PayPal Sandbox",
+      "Order tracking and product/order administration"
+    ],
+    "stack": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Supabase",
+      "PayPal Sandbox"
+    ],
+    "status": "Implemented source with Sandbox payments",
+    "limits": [
+      "Payments currently use PayPal Sandbox.",
+      "Repository documentation does not certify every production integration as fully verified."
+    ],
+    "repo": "https://github.com/NhatNguyen2407/Project/tree/main/Working_Projects/Dioxyzine_Frog",
+    "evidence": "https://github.com/NhatNguyen2407/Project/blob/main/Working_Projects/Dioxyzine_Frog/README.md",
+    "demo": "https://dioxyzinefrog.vercel.app",
+    "demoLabel": "Website link from repository",
+    "outcome": "A documented web application spanning storefront, accounts, checkout and order workflows.",
+    "accent": "#a7baff",
+    "learningFocus": [
+      "Tracing checkout through the UI, payment capture and stored order state.",
+      "Connecting account and admin flows to database access rules."
+    ]
+  },
+  {
+    "id": "management",
+    "number": "02",
+    "title": "Frog Management",
+    "category": "OPERATIONS TOOL",
+    "summary": "A staff app for workshop operations at The Frog Art Space.",
+    "role": "Building the staff interface, business workflows and Supabase-backed operations.",
+    "introduction": "I’m building a staff-only application to replace workshop spreadsheets with one place for events, counter sales, tickets, queues, inventory and reporting.",
+    "problem": "Connect the steps of running a workshop event so staff can work with the same ticket, order and stock information.",
+    "features": [
+      "Event and product management",
+      "Counter orders, tickets and queue display",
+      "Inventory movements and event expenses",
+      "Owner/staff access and financial reporting"
+    ],
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Supabase",
+      "Recharts"
+    ],
+    "status": "Phase 1 source; live acceptance testing pending",
+    "limits": [
+      "The first business unit is a workshop with a small F&B catalogue; a separate cafe workflow has not been built.",
+      "Hosted authentication, real-device updates and physical printing still need acceptance verification.",
+      "The repository also contains a separate mock frontend prototype."
+    ],
+    "repo": "https://github.com/NhatNguyen2407/frog-management",
+    "evidence": "https://github.com/NhatNguyen2407/frog-management/blob/main/README.md",
+    "demo": null,
+    "demoLabel": "No verified public demo linked in this study",
+    "outcome": "An initial implementation with documented business rules, database changes and an acceptance checklist.",
+    "accent": "#b5dda0",
+    "learningFocus": [
+      "Turning order, stock and ticket states into explicit business rules.",
+      "Separating paid revenue, cost and profit in reporting."
+    ]
+  },
+  {
+    "id": "retail",
+    "number": "03",
+    "title": "Retail Customer Insights",
+    "category": "DATA CASE STUDY",
+    "summary": "Historical transactions explored through SQL, RFM and a dashboard.",
+    "role": "Data cleaning, metric definitions, SQL analysis and dashboard presentation.",
+    "introduction": "I built this case study to practise working with transactional data from cleaning through to analysis. It uses the historical UCI Online Retail dataset and presents the results in Streamlit.",
+    "problem": "Understand sales patterns and customer behaviour while making the cleaning rules and limits of the dataset visible.",
+    "features": [
+      "Country/date filters and sales overview",
+      "SQL business questions and a local SQLite export",
+      "Rule-based RFM customer segmentation",
+      "A data-quality audit and documented metric definitions"
+    ],
+    "stack": [
+      "Python",
+      "pandas",
+      "SQLite",
+      "Plotly",
+      "Streamlit"
+    ],
+    "status": "Historical portfolio case study",
+    "limits": [
+      "The data is from 2010-2011.",
+      "Revenue from retained positive sales is not profit or net revenue after returns.",
+      "RFM segments are descriptive rules, not a trained churn model."
+    ],
+    "repo": "https://github.com/NhatNguyen2407/retail-customer-insights",
+    "evidence": "https://github.com/NhatNguyen2407/retail-customer-insights/blob/main/README.md",
+    "demo": "https://retail-customer-insights.streamlit.app/",
+    "demoLabel": "Dashboard link from repository",
+    "outcome": "A dashboard, reproducible cleaning rules, SQL queries and documented limitations.",
+    "accent": "#e9bd82",
+    "learningFocus": [
+      "Defining metrics and cleaning rules before building charts.",
+      "Keeping missing customer IDs separate from transaction-level sales."
+    ]
+  },
+  {
+    "id": "football",
+    "number": "04",
+    "title": "World Cup Player Analytics",
+    "category": "DATA EXPLORATION",
+    "summary": "Player events and comparisons within a selected World Cup match.",
+    "role": "Event aggregation, metric definitions and interactive player comparisons.",
+    "introduction": "I built a small dashboard to explore player event statistics from the 2022 World Cup. It loads StatsBomb Open Data and compares players within one selected match.",
+    "problem": "Turn event records into understandable player summaries without overstating what those records can measure.",
+    "features": [
+      "Select a match from the 2022 World Cup",
+      "Filter players by national team",
+      "Explore goals, assists, shots, passes and pass accuracy",
+      "Compare two players from the same match"
+    ],
+    "stack": [
+      "Python",
+      "pandas",
+      "Plotly",
+      "Streamlit",
+      "StatsBomb Open Data"
+    ],
+    "status": "Descriptive match-level dashboard",
+    "limits": [
+      "Metrics are for the selected match, not the whole tournament.",
+      "The current version does not estimate verified minutes or per-90 statistics.",
+      "It does not predict match outcomes or rank overall player quality."
+    ],
+    "repo": "https://github.com/NhatNguyen2407/football-analytics",
+    "evidence": "https://github.com/NhatNguyen2407/football-analytics/blob/main/README.md",
+    "demo": null,
+    "demoLabel": "Run instructions available in the repository",
+    "outcome": "An interactive player dashboard with documented event definitions and synthetic regression tests.",
+    "accent": "#b7aceb",
+    "learningFocus": [
+      "Defining player metrics from event records.",
+      "Handling zero attempts and excluding penalty-shootout events."
+    ]
+  }
+]

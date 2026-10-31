@@ -165,6 +165,8 @@ A soft spot for Japanese music and slower love songs.
 - 2026-10-29 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
 - 2026-10-28 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
 - 2026-10-27 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
+- 2026-10-26 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
+- 2026-10-25 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
 
 <h2>
 <picture>

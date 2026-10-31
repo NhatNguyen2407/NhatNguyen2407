@@ -119,6 +119,11 @@ def render_music_pending(theme):
 
 def languages_and_chess():
     languages = read_json("data/spoken-languages.json")
+    if not read_json("config/profile.json").get("chess_enabled", False):
+        parts = [heading("heading-spoken", "言語 / Languages I speak and learn"), "",
+                 "| Language | Current level |", "| --- | --- |"]
+        parts += [f'| {md(item["name"])} | {md(item["level"])} |' for item in languages]
+        return '\n'.join(parts)
     chess = read_json("data/chess-view.json")
     parts = ['<table>', '<tr>', '<td valign="top" width="45%">', heading("heading-spoken", "言語 / Languages I speak and learn"),
              '<table><thead><tr><th>Language</th><th>Current level</th></tr></thead><tbody>']

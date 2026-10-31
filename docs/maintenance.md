@@ -9,7 +9,7 @@ The profile uses Project Explorer cards, macOS-inspired window controls, Japanes
 - `assets/mascot-cat.svg`: the editable geometric mascot, reused in the scenes and contribution art.
 - `tools/build_scene.py`: the scene palettes and layout.
 - `tools/build_profile.py`: README composition, terminal, metric and music cards.
-- `config/profile.json`: GitHub author, time window, repository scope and file exclusions.
+- `config/profile.json`: GitHub author, time window, repository scope, file exclusions and the `chess_enabled` display setting.
 - `tools/chess.mjs`: chess rules, role checks and board rendering. `data/chess.json` is the authoritative game history; `data/chess-view.json` is generated.
 - `design/lettering.json`: committed vector lettering. The normal workflow does not download a font.
 
@@ -28,8 +28,8 @@ The README is generated. Change its generator or data before rebuilding so later
 - **Refresh profile data** runs daily, on relevant source changes and manually. It uses GitHub's automatic `github.token`; no personal access token is needed for the configured public repositories.
 - **Refresh music snapshot** runs only after a supported provider is set in repository Variables. It uses only the corresponding music credentials, and does not fetch GitHub statistics.
 - Both workflows serialize their commits and use the GitHub Actions bot identity. They do not rewrite history or backdate commits.
-- The chess workflow shares the same write queue. `queue: max` keeps pending runs instead of replacing older move requests. Every move is still checked against its game ID and position revision.
-- Visitors play White; John plays Black. Accepted visitor moves trigger a GitHub @mention after the position is committed. Notification delivery follows John's GitHub settings. A finished game displays "Good game! Thank you." until John starts another game.
+- Chess is temporarily paused: `chess_enabled` is `false`, and its workflow is stored outside the active workflow directory at `.github/disabled-workflows/chess.yml`. The profile does not show the board or move links, and move requests are not processed.
+- I kept the chess code, assets and game history. To resume, set `chess_enabled` to `true`, move the saved workflow back to `.github/workflows/chess.yml`, then run `npm ci --ignore-scripts`, `npm run test:chess`, `npm run build:chess` and the profile build before committing.
 - A failed data request leaves the previous committed data available with its existing timestamp.
 
 No workflow changes the project repositories, their deployments or databases.

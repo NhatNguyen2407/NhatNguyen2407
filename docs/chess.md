@@ -1,5 +1,7 @@
 # チェス / Play chess with John
 
+Chess is temporarily paused and hidden from my profile. Move requests are not processed.
+
 [Back to my profile](../README.md)
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="../assets/chess-board-dark.svg?v=g-20261031-1-0"><img src="../assets/chess-board-light.svg?v=g-20261031-1-0" alt="Current chess position" width="320"></picture>

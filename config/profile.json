@@ -1,5 +1,6 @@
 {
   "username": "NhatNguyen2407",
+  "chess_enabled": false,
   "stats_days": 30,
   "code_repositories": [
     {"name": "Project", "path": "Working_Projects/Dioxyzine_Frog/"},

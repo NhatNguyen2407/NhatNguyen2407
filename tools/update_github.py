@@ -91,10 +91,12 @@ def commit_changes(repository, sha, prefix, excluded):
 def collect(allow_pending=False):
     config = read_json("config/profile.json")
     username = config["username"]
+    days = config["stats_days"]
+    if days is not None and (type(days) is not int or days < 1):
+        raise GitHubError("stats_days must be a positive integer or null for all-time stats")
     now = datetime.now(timezone.utc).replace(microsecond=0)
-    since = now - timedelta(days=config["stats_days"])
     until = now.isoformat().replace("+00:00", "Z")
-    start = since.isoformat().replace("+00:00", "Z")
+    start = (now - timedelta(days=days)).isoformat().replace("+00:00", "Z") if days is not None else None
     cache = read_json("data/commit-cache.json", {})
     fingerprint = hashlib.sha256(json.dumps([config["code_repositories"], config["excluded_paths"]], sort_keys=True).encode()).hexdigest()
     if cache.get("fingerprint") != fingerprint:
@@ -113,7 +115,10 @@ def collect(allow_pending=False):
         values, _ = request(f"repos/{username}/{name}/languages")
         languages.update(values)
     for kind, field in [("pr", "pull_requests"), ("issue", "issues")]:
-        result, _ = request("search/issues", {"q": f"author:{username} is:{kind} is:public created:>={start} created:<={until}", "per_page": 1})
+        query = f"author:{username} is:{kind} is:public created:<={until}"
+        if start is not None:
+            query += f" created:>={start}"
+        result, _ = request("search/issues", {"q": query, "per_page": 1})
         if result.get("incomplete_results"):
             raise GitHubError("Search totals are incomplete")
         stats[field] = result["total_count"]
@@ -122,7 +127,9 @@ def collect(allow_pending=False):
         name, prefix = item["name"], item["path"]
         repository = f"{username}/{name}"
         stats["stars"] += metadata[name].get("stargazers_count", 0)
-        params = {"sha": metadata[name]["default_branch"], "author": username, "since": start, "until": until}
+        params = {"sha": metadata[name]["default_branch"], "author": username, "until": until}
+        if start is not None:
+            params["since"] = start
         if prefix:
             params["path"] = prefix.rstrip("/")
         commits = pages(f"repos/{repository}/commits", params)
@@ -156,7 +163,7 @@ def collect(allow_pending=False):
         stats["deleted"] += change["deleted"]
     if pending:
         stats["added"] = stats["deleted"] = None
-    output = {"updated_at": until, "since": start, "days": config["stats_days"], "stats": stats,
+    output = {"updated_at": until, "since": start, "days": days, "stats": stats,
               "languages": dict(languages.most_common()),
               "code_scope": config["code_repositories"], "language_scope": config["language_repositories"],
               "pending_lines": len(pending)}

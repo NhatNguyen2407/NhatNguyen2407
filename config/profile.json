@@ -1,7 +1,7 @@
 {
   "username": "NhatNguyen2407",
   "chess_enabled": false,
-  "stats_days": 30,
+  "stats_days": null,
   "code_repositories": [
     {"name": "Project", "path": "Working_Projects/Dioxyzine_Frog/"},
     {"name": "frog-management", "path": ""},

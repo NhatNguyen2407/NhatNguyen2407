@@ -10,6 +10,7 @@ The profile uses Project Explorer cards, macOS-inspired window controls, Japanes
 - `tools/build_scene.py`: the scene palettes and layout.
 - `tools/build_profile.py`: README composition, terminal and metric cards.
 - `config/profile.json`: GitHub author, time window, repository scope, file exclusions and the `chess_enabled` display setting.
+- `stats_days` is `null` for all-time GitHub metrics. A positive integer selects a rolling window; the cards use the period recorded in the successful data snapshot.
 - `tools/chess.mjs`: chess rules, role checks and board rendering. `data/chess.json` is the authoritative game history; `data/chess-view.json` is generated.
 - `design/lettering.json`: committed vector lettering. The normal workflow does not download a font.
 

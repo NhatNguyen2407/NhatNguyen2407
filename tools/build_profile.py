@@ -58,7 +58,8 @@ def render_terminal(theme):
 
 def render_stats(data, theme):
     p = PALETTES[theme]
-    body = text(24, 31, f"GITHUB / LAST {data['days']} DAYS", 13, p["accent"])
+    period = "ALL TIME" if data["days"] is None else f"LAST {data['days']} DAYS"
+    body = text(24, 31, "GITHUB / " + period, 13, p["accent"])
     stats = data["stats"]
     fields = [("Repo stars / total", stats["stars"]), ("Commits / selected scope", stats["commits"]), ("Public PRs opened", stats["pull_requests"]),
               ("Public issues opened", stats["issues"]), ("Lines added (+)", stats["added"]), ("Lines deleted (-)", stats["deleted"])]
@@ -162,7 +163,8 @@ def build():
               "", "Illustrative flow, not recorded application footage. Each overview explains the project's actual scope and limitations.", "", "</details>",
               "", heading("heading-github", "活動統計 / GitHub activity"), ""]
     if github:
-        parts += [picture("github-stats", "GitHub stats, including added and deleted lines"), "", f"Code changes: **{github['days']} days**, selected default branches and my linked GitHub author identity. PRs and issues: my public activity across GitHub. Stars: selected repositories, all time.",
+        period = "all time" if github["days"] is None else f"{github['days']} days"
+        parts += [picture("github-stats", "GitHub stats, including added and deleted lines"), "", f"Code changes: **{period}**, selected default branches and my linked GitHub author identity. PRs and issues: my public activity across GitHub. Stars: selected repositories, all time.",
                   "", "[Scope, exclusions and counting rules](docs/data-methods.md)"]
     else:
         parts += ["[My public GitHub activity](https://github.com/NhatNguyen2407)"]

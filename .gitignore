@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 .env
 .env.*
-.spotify-secrets.json
+.*-secrets.json
 .chess-result.json
 .DS_Store
 Thumbs.db

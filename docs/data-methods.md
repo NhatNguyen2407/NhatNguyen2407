@@ -11,7 +11,6 @@ The data comes from public GitHub REST endpoints, with a snapshot timestamp in `
 - Re-adding or deleting a line counts as another change. A line change total is not the current codebase size.
 - Stars: all-time stars across the selected code repositories. Stars belong to whole repositories, including the whole `Project` repository.
 - PRs and issues: public items I opened across GitHub within the same date window. These are not limited to the four code repositories.
-- Activity feed: recent public profile events, excluding the profile repository itself.
 
 Per-commit counts are cached to reduce requests. Incomplete pagination, a failed request or a commit at GitHub's 3,000-file response boundary stops the authenticated workflow and preserves the previous published snapshot. The local bootstrap option can mark lines as pending; it never publishes a partial sum as a complete count.
 
@@ -25,17 +24,7 @@ The custom catwalk uses the date and intensity levels exposed by my public GitHu
 
 The calendar renderer reads GitHub's public calendar markup, rather than a stable REST endpoint. It validates dates, levels and the number of days, and fails if that markup changes. The previous artwork remains available. The walking cat is decoration beneath the actual grid and respects reduced-motion preferences.
 
-## Music
-
-Spotify supplies a currently-playing snapshot and its top-five-artists affinity ranking for approximately four weeks. Last.fm supplies now-playing metadata and the top five artists from recorded scrobbles for one month. These rankings have different meanings and are labelled accordingly. Neither is presented as listening minutes.
-
-Music snapshots update approximately every 30 minutes after setup. GitHub Actions schedules and GitHub's image cache can delay updates. This is not continuous live playback. A failed connection keeps the timestamped last successful snapshot.
-
 ## References
 
 - [GitHub commits API](https://docs.github.com/en/rest/commits/commits)
 - [GitHub repository languages](https://docs.github.com/en/rest/repos/repos#list-repository-languages)
-- [Spotify top items](https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks)
-- [Spotify currently playing](https://developer.spotify.com/documentation/web-api/reference/get-the-users-currently-playing-track)
-- [Last.fm recent tracks](https://www.last.fm/api/show/user.getRecentTracks)
-- [Last.fm top artists](https://www.last.fm/api/show/user.getTopArtists)

@@ -88,50 +88,6 @@ def commit_changes(repository, sha, prefix, excluded):
     raise GitHubError("Commit file pagination did not complete")
 
 
-def event_summary(event, username):
-    repo = (event.get("repo") or {}).get("name", "")
-    if not repo or repo.casefold() == f"{username}/{username}".casefold():
-        return None
-    payload = event.get("payload") or {}
-    kind = event.get("type")
-    url = f"https://github.com/{repo}"
-    if kind == "PushEvent":
-        title = f"Pushed changes to {repo}"
-    elif kind == "PullRequestEvent":
-        item = payload.get("pull_request") or {}
-        title = f"{payload.get('action', 'Updated').capitalize()} PR #{item.get('number', payload.get('number', ''))} in {repo}"
-        url = item.get("html_url") or url
-    elif kind == "IssuesEvent":
-        item = payload.get("issue") or {}
-        title = f"{payload.get('action', 'Updated').capitalize()} issue #{item.get('number', '')} in {repo}"
-        url = item.get("html_url") or url
-    elif kind == "ReleaseEvent":
-        title = f"Published a release in {repo}"
-        url = (payload.get("release") or {}).get("html_url") or url
-    elif kind == "CreateEvent":
-        title = f"Created a {payload.get('ref_type', 'ref')} in {repo}"
-    else:
-        return None
-    if not url.startswith("https://github.com/"):
-        return None
-    return {"date": event.get("created_at", "")[:10], "title": title, "url": url}
-
-
-def unique_events(entries, limit=5):
-    seen = set()
-    result = []
-    for entry in entries:
-        if entry is None:
-            continue
-        key = (entry["date"], entry["title"], entry["url"])
-        if key not in seen:
-            seen.add(key)
-            result.append(entry)
-        if len(result) == limit:
-            break
-    return result
-
-
 def collect(allow_pending=False):
     config = read_json("config/profile.json")
     username = config["username"]
@@ -161,8 +117,6 @@ def collect(allow_pending=False):
         if result.get("incomplete_results"):
             raise GitHubError("Search totals are incomplete")
         stats[field] = result["total_count"]
-    events, _ = request(f"users/{username}/events/public", {"per_page": 100})
-    feed = unique_events(event_summary(event, username) for event in events)
     to_count = []
     for item in config["code_repositories"]:
         name, prefix = item["name"], item["path"]
@@ -203,7 +157,7 @@ def collect(allow_pending=False):
     if pending:
         stats["added"] = stats["deleted"] = None
     output = {"updated_at": until, "since": start, "days": config["stats_days"], "stats": stats,
-              "languages": dict(languages.most_common()), "events": feed,
+              "languages": dict(languages.most_common()),
               "code_scope": config["code_repositories"], "language_scope": config["language_repositories"],
               "pending_lines": len(pending)}
     write_json("data/commit-cache.json", {"fingerprint": fingerprint, "commits": active_cache})

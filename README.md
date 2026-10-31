@@ -146,38 +146,6 @@ Repository code composition, not a proficiency rating. The mixed coursework repo
 
 <h2>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/heading-music-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/heading-music-light.svg">
-  <img src="assets/heading-music-light.svg" alt="音楽 / In my headphones" width="280">
-</picture>
-</h2>
-
-<a href="docs/music-setup.md">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/music-pending-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/music-pending-light.svg">
-  <img src="assets/music-pending-light.svg" alt="Spotify connection pending - open the connection guide" width="760">
-</picture>
-</a>
-
-A soft spot for Japanese music and slower love songs. [Connect the listening cards](docs/music-setup.md).
-
-<h2>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/heading-updates-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/heading-updates-light.svg">
-  <img src="assets/heading-updates-light.svg" alt="近況 / Recent updates" width="280">
-</picture>
-</h2>
-
-- 2026-10-29 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
-- 2026-10-28 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
-- 2026-10-27 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
-- 2026-10-26 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
-- 2026-10-25 - [Pushed changes to NhatNguyen2407/frog-management](https://github.com/NhatNguyen2407/frog-management)
-
-<h2>
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/heading-contributions-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/heading-contributions-light.svg">
   <img src="assets/heading-contributions-light.svg" alt="活動の軌跡 / Contribution trail" width="280">

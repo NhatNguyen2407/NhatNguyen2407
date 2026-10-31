@@ -1,0 +1,12 @@
+{
+  "name": "john-profile-chess",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:chess": "node --test tests/chess.test.mjs",
+    "build:chess": "node tools/chess.mjs render"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0"
+  }
+}

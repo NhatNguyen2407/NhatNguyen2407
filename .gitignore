@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+.spotify-secrets.json
+.chess-result.json
+.DS_Store
+Thumbs.db

@@ -1,0 +1,76 @@
+name: Profile chess
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tools/chess*.mjs'
+      - 'tests/chess.test.mjs'
+      - 'tools/build_profile.py'
+      - '.github/workflows/chess.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-writes
+  queue: max
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    if: github.event_name != 'issues'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run test:chess
+      - run: |
+          npm run build:chess
+          python3 -m unittest discover -s tests -v
+          python3 tools/build_profile.py
+
+  move:
+    if: github.event_name == 'issues' && startsWith(github.event.issue.title, 'chess|')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Validate and apply the requested move
+        id: move
+        run: node tools/chess.mjs event
+      - name: Save the accepted position
+        if: steps.move.outputs.changed == 'true'
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          python3 tools/build_profile.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md data/chess.json data/chess-view.json data/chess-history.json assets/chess-board-dark.svg assets/chess-board-light.svg docs/chess.md
+          git commit -m 'Play the next profile chess move'
+          git push origin "HEAD:$DEFAULT_BRANCH"
+      - name: Notify John after a visitor move and close the request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node tools/chess-notify.mjs

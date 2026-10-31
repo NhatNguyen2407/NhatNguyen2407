@@ -1,6 +1,8 @@
 # Kết nối góc âm nhạc
 
-Profile có thể upload trước. Khi chưa kết nối, phần âm nhạc chỉ hiện một câu giới thiệu sở thích; không có bài hát hay bảng xếp hạng giả.
+Profile có thể upload trước. Khi chưa có snapshot, phần âm nhạc hiện một card chờ kết nối và link hướng dẫn; không có bài hát hay bảng xếp hạng giả.
+
+Workflow phải ở đúng `.github/workflows/music.yml`, không phải `workflows/music.yml`. Lần upload ban đầu bị thiếu cấp `.github`; đường dẫn này đã được sửa trong repo. Chạy thành công workflow profile chưa đồng nghĩa Spotify đã được ủy quyền.
 
 ## Spotify hiện tại
 

@@ -109,7 +109,7 @@ Illustrative flow, not recorded application footage. Each overview explains the 
   <img src="assets/github-stats-light.svg" alt="GitHub stats, including added and deleted lines" width="760">
 </picture>
 
-Code changes: **30 days**, selected default branches and my linked GitHub author identity. PRs and issues: my public activity across GitHub. Stars: selected repositories, all time.
+Code changes: **all time**, selected default branches and my linked GitHub author identity. PRs and issues: my public activity across GitHub. Stars: selected repositories, all time.
 
 [Scope, exclusions and counting rules](docs/data-methods.md)
 

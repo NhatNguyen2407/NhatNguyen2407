@@ -1,12 +1,8 @@
 {
   "username": "NhatNguyen2407",
-  "updated_at": "2026-11-09T10:12:36.134518+00:00",
+  "updated_at": "2026-11-10T10:17:58.756419+00:00",
   "source": "https://github.com/users/NhatNguyen2407/contributions",
   "days": [
-    {
-      "date": "2025-11-10",
-      "level": 0
-    },
     {
       "date": "2025-11-11",
       "level": 1
@@ -1461,7 +1457,11 @@
     },
     {
       "date": "2026-11-09",
-      "level": 0
+      "level": 3
+    },
+    {
+      "date": "2026-11-10",
+      "level": 1
     }
   ]
 }
